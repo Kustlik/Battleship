@@ -1,0 +1,1145 @@
+﻿<Window x:Class="BattleShip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BattleShip"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="855" Width="1642">
+    <Canvas>
+        <Grid Name="Player1Grid" Margin="26,73,0,0" Width="440" Height="440" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+
+            <Rectangle x:Name="P1CellBlank" Grid.Column="0" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.45" CenterX="1"/>
+                                <SkewTransform CenterX="1" CenterY="0.45"/>
+                                <RotateTransform Angle="135" CenterX="1" CenterY="0.45"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle x:Name="P1CellX1" Grid.Column="1" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellX2" Grid.Column="2" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellX3" Grid.Column="3" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellX4" Grid.Column="4" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellX5" Grid.Column="5" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellX6" Grid.Column="6" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellX7" Grid.Column="7" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellX8" Grid.Column="8" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellX9" Grid.Column="9" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellX10" Grid.Column="10" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle x:Name="P1CellY1" Grid.Column="0" Grid.Row="1" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellY2" Grid.Column="0" Grid.Row="2" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellY3" Grid.Column="0" Grid.Row="3" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellY4" Grid.Column="0" Grid.Row="4" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellY5" Grid.Column="0" Grid.Row="5" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellY6" Grid.Column="0" Grid.Row="6" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellY7" Grid.Column="0" Grid.Row="7" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellY8" Grid.Column="0" Grid.Row="8" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellY9" Grid.Column="0" Grid.Row="9" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P1CellY10" Grid.Column="0" Grid.Row="10" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle x:Name="P1CellA1" Fill="#FF4259B1" Grid.Column="1" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellA2" Fill="#FF4259B1" Grid.Column="1" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellA3" Fill="#FF4259B1" Grid.Column="1" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellA4" Fill="#FF4259B1" Grid.Column="1" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellA5" Fill="#FF4259B1" Grid.Column="1" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellA6" Fill="#FF4259B1" Grid.Column="1" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellA7" Fill="#FF4259B1" Grid.Column="1" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellA8" Fill="#FF4259B1" Grid.Column="1" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellA9" Fill="#FF4259B1" Grid.Column="1" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellA10" Fill="#FF4259B1" Grid.Column="1" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P1CellB1" Fill="#FF4259B1" Grid.Column="2" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellB2" Fill="#FF4259B1" Grid.Column="2" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellB3" Fill="#FF4259B1" Grid.Column="2" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellB4" Fill="#FF4259B1" Grid.Column="2" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellB5" Fill="#FF4259B1" Grid.Column="2" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellB6" Fill="#FF4259B1" Grid.Column="2" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellB7" Fill="#FF4259B1" Grid.Column="2" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellB8" Fill="#FF4259B1" Grid.Column="2" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellB9" Fill="#FF4259B1" Grid.Column="2" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellB10" Fill="#FF4259B1" Grid.Column="2" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P1CellC1" Fill="#FF4259B1" Grid.Column="3" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellC2" Fill="#FF4259B1" Grid.Column="3" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellC3" Fill="#FF4259B1" Grid.Column="3" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellC4" Fill="#FF4259B1" Grid.Column="3" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellC5" Fill="#FF4259B1" Grid.Column="3" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellC6" Fill="#FF4259B1" Grid.Column="3" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellC7" Fill="#FF4259B1" Grid.Column="3" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellC8" Fill="#FF4259B1" Grid.Column="3" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellC9" Fill="#FF4259B1" Grid.Column="3" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellC10" Fill="#FF4259B1" Grid.Column="3" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P1CellD1" Fill="#FF4259B1" Grid.Column="4" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellD2" Fill="#FF4259B1" Grid.Column="4" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellD3" Fill="#FF4259B1" Grid.Column="4" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellD4" Fill="#FF4259B1" Grid.Column="4" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellD5" Fill="#FF4259B1" Grid.Column="4" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellD6" Fill="#FF4259B1" Grid.Column="4" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellD7" Fill="#FF4259B1" Grid.Column="4" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellD8" Fill="#FF4259B1" Grid.Column="4" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellD9" Fill="#FF4259B1" Grid.Column="4" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellD10" Fill="#FF4259B1" Grid.Column="4" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P1CellE1" Fill="#FF4259B1" Grid.Column="5" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellE2" Fill="#FF4259B1" Grid.Column="5" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellE3" Fill="#FF4259B1" Grid.Column="5" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellE4" Fill="#FF4259B1" Grid.Column="5" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellE5" Fill="#FF4259B1" Grid.Column="5" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellE6" Fill="#FF4259B1" Grid.Column="5" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellE7" Fill="#FF4259B1" Grid.Column="5" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellE8" Fill="#FF4259B1" Grid.Column="5" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellE9" Fill="#FF4259B1" Grid.Column="5" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellE10" Fill="#FF4259B1" Grid.Column="5" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P1CellF1" Fill="#FF4259B1" Grid.Column="6" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellF2" Fill="#FF4259B1" Grid.Column="6" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellF3" Fill="#FF4259B1" Grid.Column="6" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellF4" Fill="#FF4259B1" Grid.Column="6" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellF5" Fill="#FF4259B1" Grid.Column="6" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellF6" Fill="#FF4259B1" Grid.Column="6" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellF7" Fill="#FF4259B1" Grid.Column="6" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellF8" Fill="#FF4259B1" Grid.Column="6" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellF9" Fill="#FF4259B1" Grid.Column="6" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellF10" Fill="#FF4259B1" Grid.Column="6" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P1CellG1" Fill="#FF4259B1" Grid.Column="7" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellG2" Fill="#FF4259B1" Grid.Column="7" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellG3" Fill="#FF4259B1" Grid.Column="7" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellG4" Fill="#FF4259B1" Grid.Column="7" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellG5" Fill="#FF4259B1" Grid.Column="7" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellG6" Fill="#FF4259B1" Grid.Column="7" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellG7" Fill="#FF4259B1" Grid.Column="7" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellG8" Fill="#FF4259B1" Grid.Column="7" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellG9" Fill="#FF4259B1" Grid.Column="7" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellG10" Fill="#FF4259B1" Grid.Column="7" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P1CellH1" Fill="#FF4259B1" Grid.Column="8" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellH2" Fill="#FF4259B1" Grid.Column="8" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellH3" Fill="#FF4259B1" Grid.Column="8" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellH4" Fill="#FF4259B1" Grid.Column="8" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellH5" Fill="#FF4259B1" Grid.Column="8" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellH6" Fill="#FF4259B1" Grid.Column="8" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellH7" Fill="#FF4259B1" Grid.Column="8" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellH8" Fill="#FF4259B1" Grid.Column="8" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellH9" Fill="#FF4259B1" Grid.Column="8" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellH10" Fill="#FF4259B1" Grid.Column="8" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P1CellI1" Fill="#FF4259B1" Grid.Column="9" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellI2" Fill="#FF4259B1" Grid.Column="9" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellI3" Fill="#FF4259B1" Grid.Column="9" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellI4" Fill="#FF4259B1" Grid.Column="9" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellI5" Fill="#FF4259B1" Grid.Column="9" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellI6" Fill="#FF4259B1" Grid.Column="9" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellI7" Fill="#FF4259B1" Grid.Column="9" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellI8" Fill="#FF4259B1" Grid.Column="9" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellI9" Fill="#FF4259B1" Grid.Column="9" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellI10" Fill="#FF4259B1" Grid.Column="9" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P1CellJ1" Fill="#FF4259B1" Grid.Column="10" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellJ2" Fill="#FF4259B1" Grid.Column="10" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellJ3" Fill="#FF4259B1" Grid.Column="10" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellJ4" Fill="#FF4259B1" Grid.Column="10" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellJ5" Fill="#FF4259B1" Grid.Column="10" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellJ6" Fill="#FF4259B1" Grid.Column="10" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellJ7" Fill="#FF4259B1" Grid.Column="10" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellJ8" Fill="#FF4259B1" Grid.Column="10" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellJ9" Fill="#FF4259B1" Grid.Column="10" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P1CellJ10" Fill="#FF4259B1" Grid.Column="10" Grid.Row="10" Stroke="White"/>
+
+            <TextBox Grid.Column="1" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="A" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="2" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="B" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="3" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="C" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="4" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="D" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="5" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="E" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="6" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="F" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="7" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="G" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="8" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="H" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="9" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="I" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="10" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="J" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+
+            <TextBox Grid.Row="1" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="1" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="2" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="2" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="3" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="3" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="4" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="5" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="5" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="6" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="6" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="7" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="7" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="8" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="8" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="9" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="9" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="10" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="10" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Canvas Grid.Column="10" Grid.Row="10"/>
+            <Canvas Grid.Column="10" Grid.Row="8"/>
+        </Grid>
+        <TextBox Canvas.Left="26" TextWrapping="Wrap" Text="Player1" Canvas.Top="29" Width="440" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Dosis" BorderBrush="White" FontSize="20" IsHitTestVisible="False">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FF8596EF"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Grid Name="Player2Grid" Width="440" Height="440" Canvas.Left="518" Canvas.Top="73">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+
+            <Rectangle x:Name="P2CellBlank" Grid.Column="0" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.45" CenterX="1"/>
+                                <SkewTransform CenterX="1" CenterY="0.45"/>
+                                <RotateTransform Angle="135" CenterX="1" CenterY="0.45"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle x:Name="P2CellX1" Grid.Column="1" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellX2" Grid.Column="2" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellX3" Grid.Column="3" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellX4" Grid.Column="4" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellX5" Grid.Column="5" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellX6" Grid.Column="6" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellX7" Grid.Column="7" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellX8" Grid.Column="8" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellX9" Grid.Column="9" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellX10" Grid.Column="10" Grid.Row="0" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="180" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle x:Name="P2CellY1" Grid.Column="0" Grid.Row="1" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellY2" Grid.Column="0" Grid.Row="2" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellY3" Grid.Column="0" Grid.Row="3" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellY4" Grid.Column="0" Grid.Row="4" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellY5" Grid.Column="0" Grid.Row="5" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellY6" Grid.Column="0" Grid.Row="6" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellY7" Grid.Column="0" Grid.Row="7" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellY8" Grid.Column="0" Grid.Row="8" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellY9" Grid.Column="0" Grid.Row="9" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="P2CellY10" Grid.Column="0" Grid.Row="10" Stroke="White">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF4259B1"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle x:Name="P2CellA1" Fill="#FF4259B1" Grid.Column="1" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellA2" Fill="#FF4259B1" Grid.Column="1" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellA3" Fill="#FF4259B1" Grid.Column="1" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellA4" Fill="#FF4259B1" Grid.Column="1" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellA5" Fill="#FF4259B1" Grid.Column="1" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellA6" Fill="#FF4259B1" Grid.Column="1" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellA7" Fill="#FF4259B1" Grid.Column="1" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellA8" Fill="#FF4259B1" Grid.Column="1" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellA9" Fill="#FF4259B1" Grid.Column="1" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellA10" Fill="#FF4259B1" Grid.Column="1" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P2CellB1" Fill="#FF4259B1" Grid.Column="2" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellB2" Fill="#FF4259B1" Grid.Column="2" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellB3" Fill="#FF4259B1" Grid.Column="2" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellB4" Fill="#FF4259B1" Grid.Column="2" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellB5" Fill="#FF4259B1" Grid.Column="2" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellB6" Fill="#FF4259B1" Grid.Column="2" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellB7" Fill="#FF4259B1" Grid.Column="2" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellB8" Fill="#FF4259B1" Grid.Column="2" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellB9" Fill="#FF4259B1" Grid.Column="2" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellB10" Fill="#FF4259B1" Grid.Column="2" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P2CellC1" Fill="#FF4259B1" Grid.Column="3" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellC2" Fill="#FF4259B1" Grid.Column="3" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellC3" Fill="#FF4259B1" Grid.Column="3" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellC4" Fill="#FF4259B1" Grid.Column="3" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellC5" Fill="#FF4259B1" Grid.Column="3" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellC6" Fill="#FF4259B1" Grid.Column="3" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellC7" Fill="#FF4259B1" Grid.Column="3" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellC8" Fill="#FF4259B1" Grid.Column="3" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellC9" Fill="#FF4259B1" Grid.Column="3" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellC10" Fill="#FF4259B1" Grid.Column="3" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P2CellD1" Fill="#FF4259B1" Grid.Column="4" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellD2" Fill="#FF4259B1" Grid.Column="4" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellD3" Fill="#FF4259B1" Grid.Column="4" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellD4" Fill="#FF4259B1" Grid.Column="4" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellD5" Fill="#FF4259B1" Grid.Column="4" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellD6" Fill="#FF4259B1" Grid.Column="4" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellD7" Fill="#FF4259B1" Grid.Column="4" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellD8" Fill="#FF4259B1" Grid.Column="4" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellD9" Fill="#FF4259B1" Grid.Column="4" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellD10" Fill="#FF4259B1" Grid.Column="4" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P2CellE1" Fill="#FF4259B1" Grid.Column="5" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellE2" Fill="#FF4259B1" Grid.Column="5" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellE3" Fill="#FF4259B1" Grid.Column="5" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellE4" Fill="#FF4259B1" Grid.Column="5" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellE5" Fill="#FF4259B1" Grid.Column="5" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellE6" Fill="#FF4259B1" Grid.Column="5" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellE7" Fill="#FF4259B1" Grid.Column="5" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellE8" Fill="#FF4259B1" Grid.Column="5" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellE9" Fill="#FF4259B1" Grid.Column="5" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellE10" Fill="#FF4259B1" Grid.Column="5" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P2CellF1" Fill="#FF4259B1" Grid.Column="6" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellF2" Fill="#FF4259B1" Grid.Column="6" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellF3" Fill="#FF4259B1" Grid.Column="6" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellF4" Fill="#FF4259B1" Grid.Column="6" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellF5" Fill="#FF4259B1" Grid.Column="6" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellF6" Fill="#FF4259B1" Grid.Column="6" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellF7" Fill="#FF4259B1" Grid.Column="6" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellF8" Fill="#FF4259B1" Grid.Column="6" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellF9" Fill="#FF4259B1" Grid.Column="6" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellF10" Fill="#FF4259B1" Grid.Column="6" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P2CellG1" Fill="#FF4259B1" Grid.Column="7" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellG2" Fill="#FF4259B1" Grid.Column="7" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellG3" Fill="#FF4259B1" Grid.Column="7" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellG4" Fill="#FF4259B1" Grid.Column="7" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellG5" Fill="#FF4259B1" Grid.Column="7" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellG6" Fill="#FF4259B1" Grid.Column="7" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellG7" Fill="#FF4259B1" Grid.Column="7" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellG8" Fill="#FF4259B1" Grid.Column="7" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellG9" Fill="#FF4259B1" Grid.Column="7" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellG10" Fill="#FF4259B1" Grid.Column="7" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P2CellH1" Fill="#FF4259B1" Grid.Column="8" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellH2" Fill="#FF4259B1" Grid.Column="8" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellH3" Fill="#FF4259B1" Grid.Column="8" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellH4" Fill="#FF4259B1" Grid.Column="8" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellH5" Fill="#FF4259B1" Grid.Column="8" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellH6" Fill="#FF4259B1" Grid.Column="8" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellH7" Fill="#FF4259B1" Grid.Column="8" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellH8" Fill="#FF4259B1" Grid.Column="8" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellH9" Fill="#FF4259B1" Grid.Column="8" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellH10" Fill="#FF4259B1" Grid.Column="8" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P2CellI1" Fill="#FF4259B1" Grid.Column="9" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellI2" Fill="#FF4259B1" Grid.Column="9" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellI3" Fill="#FF4259B1" Grid.Column="9" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellI4" Fill="#FF4259B1" Grid.Column="9" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellI5" Fill="#FF4259B1" Grid.Column="9" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellI6" Fill="#FF4259B1" Grid.Column="9" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellI7" Fill="#FF4259B1" Grid.Column="9" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellI8" Fill="#FF4259B1" Grid.Column="9" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellI9" Fill="#FF4259B1" Grid.Column="9" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellI10" Fill="#FF4259B1" Grid.Column="9" Grid.Row="10" Stroke="#FFFBF7F7"/>
+
+            <Rectangle x:Name="P2CellJ1" Fill="#FF4259B1" Grid.Column="10" Grid.Row="1" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellJ2" Fill="#FF4259B1" Grid.Column="10" Grid.Row="2" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellJ3" Fill="#FF4259B1" Grid.Column="10" Grid.Row="3" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellJ4" Fill="#FF4259B1" Grid.Column="10" Grid.Row="4" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellJ5" Fill="#FF4259B1" Grid.Column="10" Grid.Row="5" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellJ6" Fill="#FF4259B1" Grid.Column="10" Grid.Row="6" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellJ7" Fill="#FF4259B1" Grid.Column="10" Grid.Row="7" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellJ8" Fill="#FF4259B1" Grid.Column="10" Grid.Row="8" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellJ9" Fill="#FF4259B1" Grid.Column="10" Grid.Row="9" Stroke="#FFFBF7F7"/>
+            <Rectangle x:Name="P2CellJ10" Fill="#FF4259B1" Grid.Column="10" Grid.Row="10" Stroke="White"/>
+
+            <TextBox Grid.Column="1" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="A" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="2" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="B" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="3" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="C" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="4" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="D" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="5" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="E" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="6" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="F" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="7" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="G" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="8" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="H" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="9" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="I" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Column="10" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="J" VerticalAlignment="Center" Width="40" Background="{x:Null}" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" BorderBrush="{x:Null}"/>
+
+            <TextBox Grid.Row="1" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="1" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="2" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="2" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="3" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="3" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="4" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="5" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="5" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="6" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="6" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="7" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="7" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="8" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="8" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="9" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="9" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox Grid.Row="10" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="10" VerticalAlignment="Center" Width="40" FontFamily="Dosis" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Canvas Grid.Column="10" Grid.Row="10"/>
+            <Canvas Grid.Column="10" Grid.Row="8"/>
+        </Grid>
+        <TextBox Canvas.Left="518" TextWrapping="Wrap" Text="Player2" Canvas.Top="29" Width="440" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Dosis" BorderBrush="White" FontSize="20" IsHitTestVisible="False">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFEF8585"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Button x:Name="StartButton" Content="Start" Canvas.Left="246" Canvas.Top="574" Width="492" Height="43" Background="#FF97EDEC" FontFamily="Dosis" FontSize="22" Cursor="Hand" Click="StartButton_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF02655A"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <ProgressBar x:Name="Player1ProgressBar" Height="20" Canvas.Left="26" Canvas.Top="518" Width="440" Foreground="#FF8697EF" Value="100"/>
+        <ProgressBar x:Name="Player2ProgressBar" Height="20" Canvas.Left="518" Canvas.Top="518" Width="440" Background="#FFE6E6E6" Foreground="#FFEF8686" Value="100"/>
+        <TextBox Canvas.Left="1000" TextWrapping="Wrap" Text="Ustawienia" Canvas.Top="29" Width="228" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Dosis" BorderBrush="White" FontSize="20" IsHitTestVisible="False">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.7" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.7"/>
+                            <RotateTransform Angle="-180" CenterX="0.5" CenterY="0.7"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFEEEF85"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Slider x:Name="StartDelaySlider" Canvas.Left="1000" Canvas.Top="166" Width="228" Minimum="1" Value="2" Cursor="Hand"/>
+        <TextBox Canvas.Left="1000" TextWrapping="Wrap" Text="1 sec" Canvas.Top="184" Width="38" FontFamily="Dosis" BorderBrush="{x:Null}" IsHitTestVisible="False"/>
+        <TextBox Canvas.Left="1190" TextWrapping="Wrap" Text="10 sec" Canvas.Top="184" Width="38" FontFamily="Dosis" BorderBrush="{x:Null}" HorizontalContentAlignment="Right" IsHitTestVisible="False"/>
+        <TextBox Canvas.Left="1054" TextWrapping="Wrap" Text="Opóźnienie Startu" Canvas.Top="141" Width="120" FontFamily="Dosis" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="{x:Null}" IsHitTestVisible="False"/>
+        <Rectangle Height="40" Canvas.Left="1269" Canvas.Top="74" Width="40" Fill="#FF4259B1"/>
+        <TextBox Canvas.Left="1269" TextWrapping="Wrap" Text="Legenda" Canvas.Top="29" Width="165" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Dosis" BorderBrush="White" FontSize="20" IsHitTestVisible="False">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.7" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.7"/>
+                            <RotateTransform Angle="-180" CenterX="0.5" CenterY="0.7"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FF8DEF85"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Rectangle Height="40" Canvas.Left="1269" Canvas.Top="163" Width="40" Fill="#FF464646"/>
+        <Rectangle Height="40" Canvas.Left="1269" Canvas.Top="253" Width="40" Fill="Red"/>
+        <Rectangle Height="40" Canvas.Left="1269" Canvas.Top="208" Width="40" Fill="#FFEF8686"/>
+        <Rectangle Height="40" Canvas.Left="1269" Canvas.Top="119" Width="40" Fill="#FFFFDC3A"/>
+        <TextBox Canvas.Left="1314" TextWrapping="Wrap" Text="Woda" Canvas.Top="74" Width="120" FontFamily="Dosis" FontSize="14" BorderBrush="{x:Null}" IsHitTestVisible="False"/>
+        <TextBox Canvas.Left="1314" TextWrapping="Wrap" Text="Woda (Oznaczona)" Canvas.Top="119" Width="120" FontFamily="Dosis" FontSize="14" BorderBrush="{x:Null}" IsHitTestVisible="False"/>
+        <TextBox Canvas.Left="1314" TextWrapping="Wrap" Text="Statek" Canvas.Top="163" Width="120" FontFamily="Dosis" FontSize="14" BorderBrush="{x:Null}" IsHitTestVisible="False"/>
+        <TextBox Canvas.Left="1314" TextWrapping="Wrap" Text="Trafiony" Canvas.Top="208" Width="120" FontFamily="Dosis" FontSize="14" BorderBrush="{x:Null}" IsHitTestVisible="False"/>
+        <TextBox Canvas.Left="1314" TextWrapping="Wrap" Text="Zatopiony" Canvas.Top="253" Width="120" FontFamily="Dosis" FontSize="14" BorderBrush="{x:Null}" IsHitTestVisible="False"/>
+        <Slider x:Name="WaveSlider" Canvas.Left="1000" Canvas.Top="109" Width="228" Minimum="1" Value="5" Cursor="Hand"/>
+        <TextBox Canvas.Left="1000" TextWrapping="Wrap" Text="1 sec" Canvas.Top="127" Width="38" FontFamily="Dosis" BorderBrush="{x:Null}" IsHitTestVisible="False"/>
+        <TextBox Canvas.Left="1190" TextWrapping="Wrap" Text="10 sec" Canvas.Top="127" Width="38" FontFamily="Dosis" BorderBrush="{x:Null}" HorizontalContentAlignment="Right" IsHitTestVisible="False"/>
+        <TextBox Canvas.Left="1054" TextWrapping="Wrap" Text="Długość tury" Canvas.Top="84" Width="120" FontFamily="Dosis" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="{x:Null}" IsHitTestVisible="False"/>
+        <TextBox x:Name="Player1WinnerBox" Canvas.Left="26" TextWrapping="Wrap" Text="Player1 wygrywa" Canvas.Top="74" Width="440" Height="440" FontFamily="Dosis" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-45" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#7E8697EF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="Player2WinnerBox" Canvas.Left="518" TextWrapping="Wrap" Text="Player2 wygrywa" Canvas.Top="73" Width="440" Height="440" FontFamily="Dosis" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-45" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#7FEF8686" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Button x:Name="ResetButton" Content="Reset" Canvas.Left="246" Canvas.Top="630" Width="492" Height="42" Background="#FF4B7B7A" FontFamily="Dosis" FontSize="22" Cursor="Hand" Click="ResetButton_Click" IsEnabled="False">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF02655A"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+    </Canvas>
+</Window>
